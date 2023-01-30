@@ -7,7 +7,7 @@
 
 class Adder:
     @classmethod
-    def sum(x, y):
+    def sum(cls, x, y):
         """
         returns sum of x and y args
         """
