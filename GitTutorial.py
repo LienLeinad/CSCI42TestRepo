@@ -23,7 +23,14 @@ class Multiplyer:
         """
             returns product of x and y args
         """
-        return x*y
+        return x * y
+
+class Subtractor:
+    def subtract(self, x, y):
+        """
+            returns difference of x and y args
+        """
+        return x - y
     
 def main():
     adder_obj = Adder()
