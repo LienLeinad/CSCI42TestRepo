@@ -18,6 +18,7 @@ class Adder:
             returns sum of 2 and x arg
         """
         return x + 2
+
 class Multiplyer:
     def multiply(self, x, y):
         """
