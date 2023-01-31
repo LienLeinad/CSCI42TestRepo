@@ -23,6 +23,7 @@ class Adder:
 def main():
     print(Adder.sum(1, 1))
     print(Adder.add_2(1))
+    print(2-2)
 
 if __name__ == "__main__":
     main()
