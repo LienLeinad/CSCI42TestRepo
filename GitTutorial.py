@@ -27,6 +27,7 @@ class Adder:
         return 3 + x
 def main():
     print(Adder.sum(1, 1))
+    print(Adder.add_2(2))
     print(Adder.add_3(1))
 
 if __name__ == "__main__":
