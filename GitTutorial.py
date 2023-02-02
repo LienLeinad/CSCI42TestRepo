@@ -4,26 +4,38 @@
 
 """
 
+class Page:
+    num_words:int
+    def __init__(self, num_words:int = 50):
+        self.num_words = num_words
+    
 
-class Adder:
-    @classmethod
-    def sum(cls, x, y):
-        """
-        returns sum of x and y args
-        """
-        return x + y
+class Book:
+    page:Page 
 
-    @classmethod
-    def add_2(cls, x):
-        """
-            Returns sum of 2 and x
-        """
-        return 2 + x
+    def __init__(self):
+        self.page = Page(100)
+
+    def read(self):
+        print(self.page.num_words)
+
+
+class Encyclopedia(Book):
+    num_reads:int
+    def __init__(self, num_reads=1):
+        self.page = Page(1000)
+        self.num_reads = num_reads
+    def read(self):
+        print(self.page.num_words * 2)
+
+
 
 def main():
-    print(Adder.sum(1, 1))
-    print(Adder.add_2(1))
-    print(2-2)
-    print(2*2)
+    book = Book()
+    encyclopedia = Encyclopedia(2)
+    book.read()
+    encyclopedia.read()
+
+
 if __name__ == "__main__":
     main()
