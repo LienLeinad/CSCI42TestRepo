@@ -3,21 +3,31 @@
     Very basic tutorial on git add, git commit, git push, and git rebase
 
 """
+import abc
+class Reader(abc.ABC):
+    @abc.abstractmethod
+    def get_num_words(self):
+        """ returns num words attribute"""
+        
 
 class Page:
     num_words:int
+    reader:Reader
     def __init__(self, num_words:int = 50):
-        self.num_words = num_words
+        self.word_num = num_words
+        
+    def get_num_words(self):
+        return self.word_num
     
 
 class Book:
     page:Page 
-
+    reader: Reader
     def __init__(self):
         self.page = Page(100)
 
     def read(self):
-        print(self.page.num_words)
+        print(self.page.get_num_words)
 
 
 class Encyclopedia(Book):
@@ -26,7 +36,7 @@ class Encyclopedia(Book):
         self.page = Page(1000)
         self.num_reads = num_reads
     def read(self):
-        print(self.page.num_words * 2)
+        print(self.page.get_num_words * 2)
 
 
 
