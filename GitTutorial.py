@@ -11,13 +11,12 @@ class Reader(abc.ABC):
         
 
 class Page(Reader):
-    num_words:int
+    word_num:int
     def __init__(self, num_words:int = 50):
         self.word_num = num_words
         
     def get_num_words(self):
         return self.word_num
-    
 
 class Book:
     page:Page 
