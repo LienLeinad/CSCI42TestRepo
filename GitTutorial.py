@@ -6,7 +6,7 @@
 import abc
 class Reader(abc.ABC):
     @abc.abstractmethod
-    def get_num_words(self):
+    def get_num_words(self) -> int:
         """ returns num words attribute"""
         
 
@@ -22,12 +22,11 @@ class Page:
 
 class Book:
     page:Page 
-    reader: Reader
     def __init__(self):
         self.page = Page(100)
 
-    def read(self):
-        print(self.page.get_num_words)
+    def read(self) -> int:
+        print(self.page.get_num_words())
 
 
 class Encyclopedia(Book):
@@ -36,7 +35,7 @@ class Encyclopedia(Book):
         self.page = Page(1000)
         self.num_reads = num_reads
     def read(self):
-        print(self.page.get_num_words * 2)
+        print(self.page.get_num_words() * 2)
 
 
 
