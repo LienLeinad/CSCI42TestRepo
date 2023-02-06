@@ -10,9 +10,8 @@ class Reader(abc.ABC):
         """ returns num words attribute"""
         
 
-class Page:
+class Page(Reader):
     num_words:int
-    reader:Reader
     def __init__(self, num_words:int = 50):
         self.word_num = num_words
         
