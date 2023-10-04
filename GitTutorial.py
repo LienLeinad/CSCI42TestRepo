@@ -8,9 +8,6 @@ class Reader(abc.ABC):
     @abc.abstractmethod
     def get_num_words(self) -> int:
         """ returns num words attribute"""
-
-class Test:
-    pass
         
 
 class Page(Reader):
